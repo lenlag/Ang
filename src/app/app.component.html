@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+      <div class="col-xs-12">
+        <h2>Mes appareils</h2>
+        <ul class="list-group">
+          <!--
+          <app-appareil [appareilName]="appareilOne" [appareilStatus]="'éteint'"></app-appareil>
+          <app-appareil [appareilName]="appareilTwo" [appareilStatus]="statusOn"></app-appareil>
+          <app-appareil [appareilName]="appareilThree" [appareilStatus]="statusOn"></app-appareil>
+          -->
+          <!--les données du variable "appareilOne" viennent du ts du parent, propriété personnalisée [appareilName] -->
+
+
+          <app-appareil *ngFor="let appareil of appareils" [appareilName]="appareil.name"
+          [appareilStatus]="appareil.status"></app-appareil>
+          <!-- boucle ngfor sur chaque itération de 'appareil' dans le array appareils-->
+
+        </ul>
+        <button class="btn btn-success"
+                [disabled]="!isAuth"
+                (click)="onAllumer()">Tout allumer</button>
+
+        <!-- property by name/property binding []-->
+        <!-- event binding () = "method"-->
+
+      </div>
+  </div>
+</div>
+<!--
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+
+-->
+
+
+
