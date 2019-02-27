@@ -1,9 +1,0 @@
-<li class="list-group-item">
-
-  <div style="width:20px;height:20px;background-color: red;"
-  *ngIf="appareilStatus === 'éteint'"></div> <!--directive ngif -->
-
-  <h4>Appareil : {{appareilName}} --Statut : {{getStatus()}}</h4> <!--pour l'interpolation String = nom du variable ou méthode -->
-<!-- interpolation = connexion entre html et ts-->
-  <input type="text" class="form-control" [(ngModel)]="appareilName"> <!--two-way binding btw template ts and html, the code modified in the form on html page(variable name), moodifies the contents of variable-->
-</li>
